@@ -22,3 +22,6 @@ un documento PDF personalizado para cada persona, enviándolo por correo electr�
 - SharePoint / OneDrive
 - Office Scripts
 - Outlook (envío de correos)
+
+### Captura del flujo
+![Flujo Power Automate](captura_flujo.png)
