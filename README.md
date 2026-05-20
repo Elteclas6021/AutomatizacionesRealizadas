@@ -52,3 +52,35 @@ Power Platform (DEV → QA → PROD).
 
 ### Captura del flujo
 ![Flujo Dataverse](captura_dataverse.png)
+
+---
+
+## 3. Actualizar Ranking de Usuarios en Tiempo Real (Dataverse + Power Apps)
+
+### ¿Qué hace?
+Actualiza automáticamente el ranking de usuarios en Dataverse en tiempo real,
+ordenándolos según su tiempo de respuesta y puntaje obtenido por respuestas 
+correctas dentro de un juego de preguntas integrado en Power Apps.
+
+### Flujo del proceso
+1. **When Power Apps calls a flow (V2)** — Se dispara desde la aplicación de Power Apps 
+   cada vez que un usuario responde
+2. **List rows** — Obtiene todos los usuarios y sus puntajes desde Dataverse
+3. **Initialize variable** — Inicializa el contador de posición del ranking
+4. **For each** — Recorre cada usuario ordenado por puntaje y tiempo de respuesta
+5. **Update a row** — Actualiza la posición del ranking del usuario en Dataverse
+6. **Increment variable** — Avanza al siguiente puesto del ranking
+
+### Caso de uso
+Sistema de ranking dinámico para una aplicación de trivia/quiz en Power Apps,
+donde la posición de cada jugador se recalcula automáticamente después de 
+cada respuesta.
+
+### Tecnologías usadas
+- Power Automate
+- Power Apps (trigger)
+- Microsoft Dataverse
+- Variables y lógica de ordenamiento
+
+### Captura del flujo
+![Flujo Ranking](captura_ranking.png)
